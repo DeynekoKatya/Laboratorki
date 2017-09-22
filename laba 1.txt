@@ -1,0 +1,103 @@
+%% 1. Загрузка данных
+
+clc, clear
+close all
+
+% [t,rain,temp]=getweatherdatayr('http://www.yr.no/sted/Ukraina/Kiev/Kiev/varsel.xml');
+% осадки измеряются в мм
+
+% % --- При отсутствии интернета
+load([pwd,'\t.mat'])
+load([pwd,'\temp.mat'])
+load([pwd,'\rain.mat'])
+% % ------
+
+
+%% ---- 2. Температура за ближайшее время ---
+
+Temp_now=[temp(    ); {datestr(t(   ))}];
+
+disp('---------------')
+disp('Temperatyra v Kieve seichas:')
+disp(     )
+disp('---------------')
+
+%% ----- 3. Визуализация данных ---
+figure(1)
+plot(t,temp,'    '),
+plot(t,rain,'    ')
+
+datetick('x','dd')
+
+% ...
+
+axis tight
+
+legend(       ,'Location','NorthEast')
+
+hold off
+
+%% ----- 4. Корреляция температуры и осадков ------
+
+
+
+C=corrcoef(      );
+
+disp('---------------')
+disp('Coef Corr')
+disp(C(    ))
+disp('---------------')
+
+figure(2)
+imagesc(C)
+title('Cor all prices')
+xlabel('temp')
+ylabel('rain')
+
+if C(    )<    
+    disp('---------------')
+    disp('Dannie ne correlityut!!!')
+    disp('---------------')
+else
+    disp('---------------')
+    disp('Dannie crreliryut!!!')
+    disp('---------------')
+end
+%% ----- 5. Преобразование данных ------
+
+temperature=     ;
+rain_t=          ;
+
+for i=1:length(t)
+DATE(i)={datestr(t(i))}; % На сайте формат температуры привязан к промежутку времени, напр 15:00-18:00, поэтому первый и второй элемент массива будет отражать температуру от 15:00 до 18:00, второй и третий температуру от 18:00-20:00.
+end
+
+table(      )
+
+%% ----- 6. Расчет интервальной оценки центра распределения при неизвестной дисперсии -----
+
+S_temp=     (temp);
+S_rain=     (rain);
+mean_temp=     (temp);
+mean_rain=     (rain);
+t_tab=      ;
+
+disp('---------------')
+disp('Kol-vo elementov v massive:')
+disp(       )
+disp('Tablichniy koef. Studenta pri alpha=0,95:')
+disp(t_tab)
+disp('---------------')
+
+v_temp_min=          ;
+v_temp_max=          ;
+
+v_rain_min=          ;
+v_rain_max=          ;
+
+disp('---------------')
+disp('Doveritelniy interval dlya temperatyri:')
+fprintf(                              )
+disp('Doveritelniy interval dlya osadkov:')
+fprintf(                              )
+disp('---------------')
