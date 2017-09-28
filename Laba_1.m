@@ -3,14 +3,14 @@
 clc,clear
 close all
 
-%[t,rain,temp]=getweatherdatayr('http://www.yr.no/sted/Ukraina/Kiev/Kiev/varsel.xml');
+[t,rain,temp]=getweatherdatayr('http://www.yr.no/sted/Ukraina/Kiev/Kiev/varsel.xml');
 % осади вимірюються в мм 
 
 %.- За відсутності інтернету
 
-load([pwd,'\t.mat'])
-load([pwd,'\temp.mat'])
-load([pwd,'\rain.mat'])
+% load([pwd,'\t.mat'])
+% load([pwd,'\temp.mat'])
+% load([pwd,'\rain.mat'])
 
 %2.- Температура за найближчий час
 
