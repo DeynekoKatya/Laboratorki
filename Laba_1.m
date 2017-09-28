@@ -4,7 +4,7 @@ clc,clear
 close all
 
 %[t,rain,temp]=getweatherdatayr('http://www.yr.no/sted/Ukraina/Kiev/Kiev/varsel.xml');
-% осади вимірюються в мм
+% осади вимірюються в мм 
 
 %.- За відсутності інтернету
 
