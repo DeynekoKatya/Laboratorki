@@ -32,31 +32,76 @@ fprintf('S0 <-> (%1.0f*Lam,%1.0f*Mu) <-> S1 <-> (%1.0f*Lam,%1.0f*Mu) <-> S2 <-> 
 end
 
 if x1==6 % если выбрано 6 аппаратов
-    
+     Lam_mas = fliplr([1:1:x1]); 
+    if x2==x1 
+        Mu_mas= 1:1:x2; 
+    end
+    if x2<x1 
+        Mu_mas= 1:1:x2;
+        for i=1:(x1-x2) 
+Mu_mas = [Mu_mas, x2];
+        end
+    end
 % («аполните пропущенные строки самосто€тельно!!!)
     
 end
 
 if x1==7 % если выбрано 7 аппаратов
-
+ Lam_mas = fliplr([1:1:x1]); 
+    if x2==x1 
+        Mu_mas= 1:1:x2; 
+    end
+    if x2<x1 
+        Mu_mas= 1:1:x2;
+        for i=1:(x1-x2) 
+Mu_mas = [Mu_mas, x2];
+        end
+    end
 % («аполните пропущенные строки самосто€тельно!!!)
 
 end
 
 if x1==8 % если выбрано 8 аппаратов
-
+ Lam_mas = fliplr([1:1:x1]); 
+    if x2==x1 
+        Mu_mas= 1:1:x2; 
+    end
+    if x2<x1 
+        Mu_mas= 1:1:x2;
+        for i=1:(x1-x2) 
+Mu_mas = [Mu_mas, x2];
+        end
+    end
 % («аполните пропущенные строки самосто€тельно!!!)
 
 end
 
 if x1==9 % если выбрано 9 аппаратов
-
+ Lam_mas = fliplr([1:1:x1]); 
+    if x2==x1 
+        Mu_mas= 1:1:x2; 
+    end
+    if x2<x1 
+        Mu_mas= 1:1:x2;
+        for i=1:(x1-x2) 
+Mu_mas = [Mu_mas, x2];
+        end
+    end
 % («аполните пропущенные строки самосто€тельно!!!)
     
 end
 
 if x1==10 % если выбрано 10 аппаратов
-
+ Lam_mas = fliplr([1:1:x1]); 
+    if x2==x1 
+        Mu_mas= 1:1:x2; 
+    end
+    if x2<x1 
+        Mu_mas= 1:1:x2;
+        for i=1:(x1-x2) 
+Mu_mas = [Mu_mas, x2];
+        end
+    end
 % («аполните пропущенные строки самосто€тельно!!!)
     
 end
